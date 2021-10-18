@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import AnimeList from '../../components/anime/listTrending';
-import SearchAnime from '/home/epaminondas/Documents/AnimL/client/src/components/search/seachAnime';
+import SearchAnime from '../../components/search/seachAnime';
 
 function Home() {
   return (
