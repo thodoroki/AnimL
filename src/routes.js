@@ -7,4 +7,6 @@ routes.get('/', Favorito.index);
 
 routes.get('/api/favoritos', Favorito.index);
 
+routes.post('/api/favoritos', Favorito.create);
+
 module.exports = routes;
