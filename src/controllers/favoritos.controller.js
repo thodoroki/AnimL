@@ -17,7 +17,6 @@ module.exports = {
         }else{
             return res.status(500).json(anime);
         }
-
     }
 }
 
