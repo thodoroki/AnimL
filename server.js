@@ -6,7 +6,11 @@ const mongoose = require('mongoose');
 
 const app = express();
 const port = process.env.PORT || 5000;
+<<<<<<< HEAD
 const uri = "";
+=======
+const uri = "mongodb+srv://animebd:animebd@cluster0.0oswo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+>>>>>>> 4209f540a1e6c82e949fcb3fcf429ddc739b2ccb
 
 mongoose.connect(uri, {
     useUnifiedTopology: true,
