@@ -10,7 +10,6 @@ function Home() {
       <h1>Animes</h1>
       <SearchAnime/>
       <AnimeList />
-      <Calendar />
     </div>
   );
 }
