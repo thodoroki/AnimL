@@ -19,9 +19,9 @@ module.exports = {
         }
     },
     async delete(req, res){
-        const { _id } = req.params.Favoritos
+        const { _id } = req.params;
 
-        const anime = await Favoritos.findByIdAndDeletei({ _id });
+        const anime = await Favoritos.findByIdAndDelete({ _id });
 
         return res.json(anime);
     }

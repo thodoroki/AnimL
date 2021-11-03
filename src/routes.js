@@ -9,6 +9,6 @@ routes.get('/api/favoritos', Favorito.index);
 
 routes.post('/api/favoritos', Favorito.create);
 
-routes.delete('/api/favoritos/:_id', Favorito.delete());
+//routes.delete('/api/favoritos/:_id', Favorito.delete());
 
 module.exports = routes;
