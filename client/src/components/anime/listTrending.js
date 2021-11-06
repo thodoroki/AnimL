@@ -21,6 +21,7 @@ function AnimeList() {
               <li testid="anime" key={anime.id}>
                 <Card titulo={anime.attributes.canonicalTitle} 
                 poster={anime.attributes.posterImage.small}
+                animeId={anime.id}
                 />
               </li>
             ))}
