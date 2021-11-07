@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+import './style.css';
+import AnimePage from '../../components/anime/animePage';
 
 function Anime(props) {
     const { animeId } = props.match.params;
@@ -14,22 +15,16 @@ function Anime(props) {
     }, []);
 
     return (
-        <div className="anime-info">
-            <div className="Name">
-                {info.data && (
-                    <div key={info.data.id}>
-                        <h1>{info.data.attributes.canonicalTitle}</h1>
-                        <img
-                            src={info.data.attributes.posterImage.small}
-                            alt={info.data.attributes.canonicalTitle}
-                        />
-                        <div className="info">
-                            <h2>{info.data.attributes.description}</h2>
-                            <h3>{info.data.attributes.synopsis}</h3>     
-                        </div>
-                    </div>
-                )}
-            </div>
+        <div className="anime--page">    
+            {info.data && (
+                <AnimePage 
+                poster={info.data.attributes.posterImage.small}
+                nome={info.data.attributes.canonicalTitle} 
+                average={info.data.attributes.averageRating}
+                synopsi={info.data.attributes.synopsis}
+                coverImage={info.data.attributes.coverImage.original}/>
+            )}
+            
         </div>
     );
 }

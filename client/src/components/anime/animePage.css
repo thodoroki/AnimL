@@ -1,0 +1,51 @@
+.info {
+    display: flex;
+    position: relative;
+    z-index: 5;
+}
+
+.info .info--bg {
+    background: no-repeat;
+    background-size: cover;
+    position: absolute; 
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .2;
+    box-shadow: inset 0px -100px 100px #0A1931;
+}
+.info--button__back {
+    background-color: transparent;
+    border: 2px solid #c4c4c4;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    align-self: flex-start;
+    margin: 15px;
+}
+
+.info img {
+    border-radius: 15px;
+    
+    max-height: 350px;
+    margin: 15px;
+}
+
+.info--anime {
+    color: #c4c4c4;
+    margin-left: 20px;
+}
+
+.info--anime h1 {
+    color: #fff;
+}
+.info--anime p {
+    width: 70%;
+}
+.info--anime span {
+    color: #FFC947;
+}
