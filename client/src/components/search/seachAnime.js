@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchTitle from './searchTitle';
+import './searchBar.css'
+
 
 function SeachAnime() {
     const [text, setText] = useState('');
@@ -15,22 +17,32 @@ function SeachAnime() {
       }
     }, [text]);
     
+   
+
+
     return (
-      <div className="Seach">
-        <h2>Pesquisar Anime:
-          <SearchTitle value={text} onChange={(search) => setText(search)} />
-        </h2>
-        {info.data && (
-          <ul className="animes-list">
-          {info.data.map((item)=>(
-            <li key={item.id}>
-              {item.attributes.canonicalTitle}
-            </li>
-          ))}
-          </ul>
-          )}
+      <div className="Search">
+          <SearchTitle value={text} onChange={(search) => setText(search)} placeholder="Pesquisar Anime" />
+          
+            {info.data && (
+            <div className='dataResult'>
+              <ul className="animes-list">
+              {info.data.map((item)=>(
+                <li key={item.id}>
+                  <a className='dataItem' href=''>
+                    <p>{item.attributes.canonicalTitle}</p>
+                  </a>
+                </li>
+              ))}
+              </ul>
+            </div>
+            )}
+          
+        
       </div>
-    );
-  }
+    )
+}
   
   export default SeachAnime;
+
+  

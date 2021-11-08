@@ -1,13 +1,21 @@
 import React from 'react';
+import "./searchBar.css"
   
-const SearchTitle = ({value, onChange}) => {
+const SearchTitle = ({value, onChange,placeholder}) => {
     
     function handleChange(event){
         onChange(event.target.value);
     }
 
     return(
-    <input type='search' value={value} onChange={handleChange}/>
+        <div className="search">
+            <div className="searchInputs">
+                <input type='text' placeholder={placeholder} a value={value} onChange={handleChange}/>
+                <div className="searchIcon"></div>
+        </div>
+        </div>
+        
+    
     );
 };
 
