@@ -13,7 +13,10 @@ function AnimePage(props) {
                 <span className="material-icons">navigate_before</span>
                 voltar
             </button>
-            <img src={props.poster}></img>
+            <div className="info--box">
+                <img src={props.poster}></img>
+                <button className="info--btn-fav info--btn-fav__active">Add aos favoritos</button>
+            </div>
             <div className="info--anime">
                 <h1>{props.nome}</h1>
                 <div className="info--score">

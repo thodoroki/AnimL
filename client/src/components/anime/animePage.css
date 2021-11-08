@@ -49,3 +49,21 @@
 .info--anime span {
     color: #FFC947;
 }
+
+.info--btn-fav {
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 70%;
+    transition: background .3s;
+    border-radius: 5px;
+    background-color: #185ADB;
+}
+
+.info--btn-fav:hover{
+    background-color: #FFC947;
+}
+.info--box {
+    text-align: center;
+}
