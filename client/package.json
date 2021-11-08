@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://es2-ufpi.github.io/AnimL/",
   "dependencies": {
     "@fullcalendar/daygrid": "^5.10.0",
     "@fullcalendar/interaction": "^5.10.0",
