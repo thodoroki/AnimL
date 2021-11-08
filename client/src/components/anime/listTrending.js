@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 
+import Card from './cardAnime';
+
 function AnimeList() {
     const [info, setInfo] = useState({});
     useEffect(()=>{
@@ -17,15 +19,16 @@ function AnimeList() {
           <ul className="animes-list">
             {info.data.map((anime) => (
               <li testid="anime" key={anime.id}>
-                <img
-                  src={anime.attributes.posterImage.small}
-                  alt={anime.attributes.canonicalTitle}
+                <Card titulo={anime.attributes.canonicalTitle} 
+                poster={anime.attributes.posterImage.small}
+                animeId={anime.id}
                 />
-                {anime.attributes.canonicalTitle}
               </li>
             ))}
           </ul>
-        )}
+        )};
+       
+        
       </div>
     );
 }

@@ -1,0 +1,52 @@
+.card-serie{
+    background-color: #185ADB;
+    max-width: 180px;
+    max-height: 310px;
+    border-radius: 10px;
+    margin: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: all ease 0.2s;
+}
+
+.card-serie:hover{
+    transform: scale(1.1);
+}
+
+.poster-image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background-size: 230px;
+    background-repeat: no-repeat; 
+}
+.fav-btn {
+    position: absolute;
+    margin: 5px;
+    color: #EFEFEF;
+}
+
+.fav-btn:hover {
+    color: #FFC947;
+}
+
+.card-datail{
+    text-align: left;
+    margin-left: 10px;
+    color: #EFEFEF;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: Ellipsis;
+}
+.card-datail h1 {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.card-datail h2{
+    font-size: .8em;
+    opacity: .7;
+    font-weight: lighter;
+}
+.detail{
+    text-decoration: none;
+}

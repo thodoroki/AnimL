@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.animes-list {
+.favorites-list {
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
@@ -13,6 +13,6 @@
     grid-gap: .1rem;
 }
 
-.animes-list img {
+.favorites-list img {
     max-width: 100%;
 }
