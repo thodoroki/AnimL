@@ -19,7 +19,7 @@ jobs:
    - name: Install Packages
      run: npm install
    - name: Entrar na pasta
-     run: cd Client
+     run: cd client
    - name: Install React Packages
      run: npm install
    - name: sair da pasta
