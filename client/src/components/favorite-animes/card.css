@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    border: 2px solid #FFC947;
+    margin-left: 30px;
+}
+
+.card img {
+    max-width: 100px;
+    max-height: 150px;
+}
+
+.card--info {
+    color: #EFEFEF;
+    margin-left: 10px;
+    display: flex;
+    width: 100%;
+}
+.card--info button{
+    padding: 10px 20px 10px 20px;
+    max-height: 50px;
+    margin: 40px 20% 0 55%;
+    background-color: #FFC947;
+    border: none;
+    border-radius: 10px;
+    color: #0A1931;
+}
