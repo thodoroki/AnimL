@@ -7,8 +7,8 @@ export default function CardAnime(props){
             <img src={props.poster} alt=""></img>
             <div className="card--info">
                 <h3>{props.titulo}</h3>
-                <button>Remover</button>
             </div>
+            <button>Remover</button>
             
         </div>
     );

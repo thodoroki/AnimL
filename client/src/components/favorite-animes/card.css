@@ -15,10 +15,10 @@
     display: flex;
     width: 100%;
 }
-.card--info button{
+.card button{
     padding: 10px 20px 10px 20px;
     max-height: 50px;
-    margin: 40px 20% 0 55%;
+    margin: 2% 2% 0 0;
     background-color: #FFC947;
     border: none;
     border-radius: 10px;
