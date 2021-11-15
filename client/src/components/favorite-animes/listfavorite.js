@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import api from '../../services/api'
-import Card from '../anime/cardAnime';
+import CardFavoritos from './cardFavorito';
 
 function FavoritesList() {
     const [animes, setAnimes] = useState({});
@@ -14,20 +14,21 @@ function FavoritesList() {
     }, []);    
         return (
             <div className="List">
-                {animes.data && (
-                    <ul className="animes-list">
-                        {animes.data.map((anime, index) => (
-                            <li key={index}>
-                                <Card titulo= {anime.nome_anime}
-                                    poster={anime.poster}
-                                    animeId={anime.id_original}
-                                    />
-                            </li>
-                        ))}
-                    </ul>
-                )};
-
-
+                {animes.data &&(
+                <section className="list--card">
+                    <h1>Favoritos</h1>
+                    {animes.data.map((anime, index) => (
+                        <div key={index}>
+                            <CardFavoritos 
+                                titulo= {anime.nome_anime}
+                                poster={anime.poster}
+                                animeId={anime.id_original}>
+                            </CardFavoritos>
+                        </div>
+                    ))}
+                </section> 
+                )}
+   
             </div>
         );
     }
