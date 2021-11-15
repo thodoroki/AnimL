@@ -16,3 +16,26 @@
 .favorites-list img {
     max-width: 100%;
 }
+
+.favorite-card{
+    position: relative;
+}
+.button__remove__favorite {
+    border: none;
+    position: absolute;
+    left: 45px;
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    max-height: 310px;
+    border-radius: 5px;
+    margin: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: all ease 0.2s;
+}
+.button__remove__favorite:hover{
+    transform: scale(1.1);
+    background-color: #ff0000;
+    color: #ffffff;
+}
