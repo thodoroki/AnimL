@@ -1,6 +1,11 @@
-.List {
-    font-family: sans-serif;
-    text-align: center;
+.list--card {
+    flex-direction: column;
+    background-color: #185ADB;
+    width: 80%;
+    margin-left: 100px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
 }
 
 .favorites-list {
@@ -38,4 +43,8 @@
     transform: scale(1.1);
     background-color: #ff0000;
     color: #ffffff;
+.list--card h1 {
+    font-family: 'Anton', sans-serif;
+    color: #FFC947;
+    letter-spacing: .2rem;
 }

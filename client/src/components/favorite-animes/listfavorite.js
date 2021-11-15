@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import api from '../../services/api'
-import Card from '../anime/cardAnime';
+import CardFavoritos from './cardFavorito';
 
 
 async function handleDelete(animeId){
@@ -39,7 +39,6 @@ function FavoritesList() {
                         ))}
                     </ul>
                 )};
-
 
             </div>
         );
