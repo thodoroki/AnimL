@@ -1,47 +1,40 @@
-import React from 'react'
-import FullCalendar from '@fullcalendar/react' 
+import React, { useEffect, useState } from 'react';
+import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import { Link } from 'react-router-dom';
 import './fullCalendar.css';
+import FavoritesListEvents from './getEvents'
 
-var calendarEvents = [{
-  id: 12,
-  title: 'One Piece', 
-  start: '2021-11-22',
-  end: '2021-11-22'
-}];
-
-
+var calendarEvents =FavoritesListEvents();//Essa variavel tem que receber a lista de eventos, nao consigo puxar do getEvents.js
 
 export default class calendar extends React.Component {
   render() {
     return (
       <FullCalendar
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            headerToolbar={{
-              left: 'prev,next today',
-              center: 'title'
-            }}
-            initialView=''
-            editable={true}
-            selectable={true}
-            selectMirror={true}
-            dayMaxEvents={true}
-            initialEvents={calendarEvents}
-            eventClick={this.handleEventClick}
-            eventsSet={this.handleEvents}
-          />
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+        headerToolbar={{
+          left: 'prev,next today',
+          center: 'title'
+        }}
+        initialView=''
+        editable={true}
+        selectable={true}
+        selectMirror={true}
+        dayMaxEvents={true}
+        initialEvents={calendarEvents}
+        eventClick={this.handleEventClick}
+        eventsSet={this.handleEvents}
+      />
     )
   }
   handleEventClick = (clickInfo) => {
     window.location.href = `/anime/${clickInfo.event._def.publicId}`;
   }
-  
+
   handleEvents = (events) => {
     this.setState({
       currentEvents: events
     })
   }
-} 
+}
