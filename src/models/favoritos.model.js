@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const DataSchema = new mongoose.Schema({
     nome_anime: String,
     poster: String,
-    id_original: String
+    id_original: String,
+    start: Date,
+    end: Date
 },{
     timestamps:true
 }); 
