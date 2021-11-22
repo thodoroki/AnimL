@@ -21,7 +21,9 @@ function AnimePage(props) {
                         await api.post('/api/favoritos', {
                             "nome_anime": props.nome,
                             "poster": props.poster,
-                            "id_original": props.animeId
+                            "id_original": props.animeId,
+                            "start": props.start,
+                            "end": props.end
                         }).then(function (response) {
                             console.log(response);
                           })
