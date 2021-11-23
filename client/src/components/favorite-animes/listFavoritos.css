@@ -1,0 +1,18 @@
+.list--card {
+    flex-direction: column;
+    background-color: #185ADB;
+    width: 80%;
+    margin-left: 100px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+
+.list--card h1 {
+    font-family: 'Anton', sans-serif;
+    color: #FFC947;
+    letter-spacing: .2rem;
+}

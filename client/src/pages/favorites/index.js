@@ -5,7 +5,6 @@ import FavoritesList from '../../components/favorite-animes/listfavorite'
 function Favorites() {
     return (
       <div className="Favorites">
-        <h1>Animes favoritos</h1>
         <FavoritesList/>
       </div>
     );
