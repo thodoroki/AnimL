@@ -4,10 +4,10 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import './fullCalendar.css';
-import FavoritesListEvents from './getEvents'
+import getEvents from './getEvents'
 
-var calendarEvents =FavoritesListEvents();//Essa variavel tem que receber a lista de eventos, nao consigo puxar do getEvents.js
-
+var calendarEvents = getEvents;//Essa variavel tem que receber a lista de eventos, nao consigo puxar do getEvents.js
+console.log(calendarEvents);
 export default class calendar extends React.Component {
   render() {
     return (

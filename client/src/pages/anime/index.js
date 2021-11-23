@@ -18,6 +18,7 @@ function Anime(props) {
         <div className="anime--page">    
             {info.data && (
                 <AnimePage 
+                animeId={animeId}
                 poster={info.data.attributes.posterImage.small}
                 nome={info.data.attributes.canonicalTitle} 
                 average={info.data.attributes.averageRating}

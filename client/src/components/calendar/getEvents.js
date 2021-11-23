@@ -1,26 +1,37 @@
-import React, { useEffect, useState } from 'react';
 import api from '../../services/api'
 
-var calendarEvents =[];
+const seconds_minute = 60;
+const minutes_hours = 60;
+const miliseconds_minute = 1000;
+const hours_day = 24;
+const oneDayInMiliSeconds = seconds_minute * minutes_hours * miliseconds_minute * hours_day;
 
-function FavoritesListEvents() {
-    const [animes, setAnimes] = useState({});
-    useEffect(() => {
-        async function loadAnimes() {
-            const response = await api.get('/api/favoritos');
-            setAnimes(response);
-        }
-        loadAnimes();
-    }, []);
-    animes.data.map((anime) => {
-        calendarEvents.push({
-            id: anime.id_original,
-            title: anime.nome_anime,
-            start: anime.createdAt,
-            end: anime.createdAt
+
+async function getEvents() {
+    let calendarEvents = [];
+    let currentDate = new Date;
+    const response = await api.get('/api/favoritos')
+    response.data.map((anime) => {
+        if(anime.end === null){
+        let newCurrentYear = currentDate.getFullYear();
+        let newCurrentMonth = currentDate.getMonth() + 1;
+        let newDateStartSliced = anime.start.substring(7, 24);
+        let newDateStart = `${newCurrentYear}-${newCurrentMonth}${newDateStartSliced}`;
+        let newDateStartFormated = new Date(newDateStart.toString())
+
+        for (let i = -210; i < 210; i += 7) {
+            const dateStartFormated = new Date((newDateStartFormated.getTime() + oneDayInMiliSeconds*i));
+            calendarEvents.push({
+                id: anime.id_original,
+                title: anime.nome_anime,
+                start: dateStartFormated,
+                end: anime.end
             });
+        }
+    }
     });
-    return calendarEvents;
-}
 
-export default FavoritesListEvents;
+    console.log(calendarEvents);
+    return calendarEvents
+}
+export default getEvents;
