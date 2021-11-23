@@ -3,8 +3,17 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import { Link } from 'react-router-dom';
+import './fullCalendar.css';
 
-var calendarEvents = {};
+var calendarEvents = [{
+  id: 12,
+  title: 'One Piece', 
+  start: '2021-11-22',
+  end: '2021-11-22'
+}];
+
+
 
 export default class calendar extends React.Component {
   render() {
@@ -15,13 +24,24 @@ export default class calendar extends React.Component {
               left: 'prev,next today',
               center: 'title'
             }}
-            initialView='timeGridWeek'
+            initialView=''
             editable={true}
             selectable={true}
             selectMirror={true}
             dayMaxEvents={true}
-            // eventContent={calendarEvents} 
+            initialEvents={calendarEvents}
+            eventClick={this.handleEventClick}
+            eventsSet={this.handleEvents}
           />
     )
   }
-}
+  handleEventClick = (clickInfo) => {
+    window.location.href = `/anime/${clickInfo.event._def.publicId}`;
+  }
+  
+  handleEvents = (events) => {
+    this.setState({
+      currentEvents: events
+    })
+  }
+} 
