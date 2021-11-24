@@ -22,8 +22,6 @@ jobs:
      run: cd client
    - name: Install React Packages
      run: npm i
-   - name: sair da pasta
-     run: cd ..
    - name: Build project
      run: npm run build
    - name: Upload production-ready build files
