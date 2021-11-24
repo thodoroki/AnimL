@@ -6,14 +6,9 @@
   },
   "description": "engenharia de software 2",
   "main": "index.js",
-
-
-
   "homepage": "https://thodoroki.github.io/AnimL/",
-
   "scripts": {
     "start": "webpack-dev-server --hot",
-
     "client": "npm start --prefix client",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \" npm run client\"",
@@ -35,6 +30,8 @@
   },
   "devDependencies": {
     "cypress": "^8.7.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "nodemon": "^2.0.13"
   }
 }
