@@ -8,7 +8,6 @@
   "main": "index.js",
   "homepage": "https://thodoroki.github.io/AnimL/",
   "scripts": {
-    "start": "webpack-dev-server --hot",
     "client": "npm start --prefix client",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \" npm run client\"",
