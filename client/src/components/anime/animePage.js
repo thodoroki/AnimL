@@ -1,8 +1,9 @@
 import React from 'react';
 import './animePage.css';
+import api from '../../services/api';
 
 function AnimePage(props) { 
-  
+    
     return (
         <div className="info">
             <div className="info--bg"
@@ -15,7 +16,22 @@ function AnimePage(props) {
             </button>
             <div className="info--box">
                 <img src={props.poster}></img>
-                <button className="info--btn-fav info--btn-fav__active">Add aos favoritos</button>
+                <button className="info--btn-fav info--btn-fav__active" onClick={
+                    async function insertAnime(){
+                        await api.post('/api/favoritos', {
+                            "nome_anime": props.nome,
+                            "poster": props.poster,
+                            "id_original": props.animeId,
+                            "start": props.start,
+                            "end": props.end
+                        }).then(function (response) {
+                            console.log(response);
+                          })
+                          .catch(function (error) {
+                            console.log(error);
+                          });
+                    }
+                }>Add aos favoritos</button>
             </div>
             <div className="info--anime">
                 <h1>{props.nome}</h1>

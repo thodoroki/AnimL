@@ -9,7 +9,7 @@ jobs:
    runs-on: ubuntu-latest
    strategy:
      matrix:
-       node-version: [10.x]
+      node-version: [10.x]
    steps:
    - uses: actions/checkout@v2
    - name: Use Node.js ${{ matrix.node-version }}
@@ -17,15 +17,13 @@ jobs:
      with:
        node-version: ${{ matrix.node-version }}
    - name: Install Packages
-     run: yarn install
+     run: npm i
    - name: Entrar na pasta
-     run: cd Client
+     run: cd client
    - name: Install React Packages
-     run: yarn install
-   - name: sair da pasta
-     run: cd ..
+     run: npm i
    - name: Build project
-     run: yarn build
+     run: npm run build
    - name: Upload production-ready build files
      uses: actions/upload-artifact@v2
      with:

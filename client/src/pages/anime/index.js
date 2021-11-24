@@ -18,11 +18,15 @@ function Anime(props) {
         <div className="anime--page">    
             {info.data && (
                 <AnimePage 
+                animeId={animeId}
                 poster={info.data.attributes.posterImage.small}
                 nome={info.data.attributes.canonicalTitle} 
                 average={info.data.attributes.averageRating}
                 synopsi={info.data.attributes.synopsis}
-                coverImage={info.data.attributes.coverImage.original}/>
+                coverImage={info.data.attributes.coverImage.original}
+                start={info.data.attributes.startDate}
+                end={info.data.attributes.endDate}
+                />
             )}
             
         </div>

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './style.css';
+import './listFavoritos.css';
 import api from '../../services/api'
-import Card from '../anime/cardAnime';
+import CardFavoritos from './cardFavorito';
+
 
 function FavoritesList() {
     const [animes, setAnimes] = useState({});
@@ -11,25 +12,26 @@ function FavoritesList() {
             setAnimes(response);
         }
         loadAnimes();
-    }, []);    
-        return (
-            <div className="List">
-                {animes.data && (
-                    <ul className="animes-list">
-                        {animes.data.map((anime, index) => (
-                            <li key={index}>
-                                <Card titulo= {anime.nome_anime}
-                                    poster={anime.poster}
-                                    animeId={anime.id_original}
-                                    />
-                            </li>
-                        ))}
-                    </ul>
-                )};
+    }, []);
+    return (
+        <div className="List">
+            {animes.data && (
+                <ul className="list--card">
+                    <h1>Animes favoritos</h1>
+                    {animes.data.map((anime, index) => (
+                        <li key={index}>
+                            <CardFavoritos titulo={anime.nome_anime}
+                                poster={anime.poster}
+                                animeId={anime.id_original}
+                                originalId={anime._id}
+                            />
+                        </li>
+                    ))}
+                </ul>
+            )};
 
+        </div>
+    );
+}
 
-            </div>
-        );
-    }
-
-    export default FavoritesList;
+export default FavoritesList;
