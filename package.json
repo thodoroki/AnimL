@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "engenharia de software 2",
   "main": "index.js",
-  "homepage": "https://es2-ufpi.github.io/AnimL/",
+
+
+
+  "homepage": "https://thodoroki.github.io/AnimL/",
+
   "scripts": {
     "client": "npm start --prefix client",
     "server": "nodemon server.js",
