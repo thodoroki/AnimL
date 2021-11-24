@@ -12,9 +12,7 @@
   "homepage": "https://thodoroki.github.io/AnimL/",
 
   "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "eject": "react-scripts eject",
+    "start": "webpack-dev-server --hot",
 
     "client": "npm start --prefix client",
     "server": "nodemon server.js",
