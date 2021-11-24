@@ -1,6 +1,9 @@
 {
   "name": "projeto-ufpi",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "engenharia de software 2",
   "main": "index.js",
   "homepage": "https://es2-ufpi.github.io/AnimL/",
